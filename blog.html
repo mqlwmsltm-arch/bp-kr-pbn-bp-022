@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 제작 비용, 왜 계속 오르는 걸까요?</title>
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <meta name="description" content="쇼핑몰 견적 산출이 어렵다고요? 개발자 입장에서 본 '경기 쇼핑몰 제작 비용'의 모든 것. 숨겨진 비용 없이 솔직한 이야기를 들려드립니다.">
+    <meta name="keywords" content="쇼핑몰 제작 비용, 쇼핑몰 견적, 이커머스 개발, 경기 쇼핑몰, 웹개발자 블로그">
+    <link rel="canonical" href="https://kr-pbn-bp-022.pages.dev/blog">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="쇼핑몰 제작 비용, 왜 계속 오르는 걸까요?">
+    <meta property="og:description" content="디자인부터 서버 관리까지, 견적서 뒤에 숨겨진 진짜 비용을 파헤칩니다.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://kr-pbn-bp-022.pages.dev/blog">
+
+    <style>
+        /* Design System Variables */
+        :root {
+            --color-bg: #F9F7F2;
+            --color-text: #2C2C2C;
+            --color-primary: #5D7052; /* Organic Olive */
+            --color-secondary: #D4A373; /* Warm Earth */
+            --color-accent: #E76F51; /* Soft Terracotta */
+            --color-light: #FFFFFF;
+            --color-border: #E5E5E5;
+            --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --container-width: 1100px;
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Typography */
+        h1, h2, h3 { font-weight: 700; line-height: 1.3; color: var(--color-primary); }
+        h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; }
+        h3 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.8rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+        a { color: var(--color-text); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--color-primary); }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--color-bg);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            letter-spacing: -0.5px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        nav a.active {
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+        }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero Section (Blog Header) */
+        .hero {
+            padding: 6rem 0 4rem;
+            background-color: var(--color-light);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .hero-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .tag {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Content Area */
+        .article-content {
+            background: var(--color-light);
+            padding: 3rem;
+            margin-top: -3rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            margin-bottom: 4rem;
+        }
+        
+        .content-block {
+            margin-bottom: 2rem;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--color-secondary);
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: #555;
+            margin: 2rem 0;
+            background: #FAF9F6;
+            padding: 1.5rem;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        /* Grid for FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .faq-item {
+            background: var(--color-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .faq-item h4 {
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .article-content { padding: 1.5rem; margin-top: -2rem; }
+            nav ul { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">ORGANIC DEV.</a>
+            <nav>
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about">소개</a></li>
+                    <li><a href="/blog" class="active">블로그</a></li>
+                    <li><a href="tel:010-1234-5678">문의하기</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="메뉴 열기">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-meta">
+                <span class="tag">Insight</span>
+                <span>2024. 05. 21 · by Senior Developer</span>
+            </div>
+            <h1>쇼핑몰 제작 비용, <br>왜 계속 오르는 걸까요?</h1>
+            <p style="font-size: 1.2rem; color: #555;">
+                "왜 A 회사는 300 만원인데 B 회사는 1,000 만원일까요?"<br>
+                고객님들이 가장 많이 하시는 질문이자, 가장 오해하기 쉬운 부분입니다.今天就 솔직하게 털어놓습니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <article class="article-content">
+            
+            <div class="content-block">
+                <p>안녕하세요. 경기 지역에서 쇼핑몰을 준비하시는 사장님들과 이야기를 나누다 보면, 가장 먼저 마주치는 장벽이 바로 <strong>'견적'</strong>입니다. 어떤 분은 "카페24 로 충분하다" 하시고, 어떤 분은 "독자 구축이 답이다"라고 하시죠. 과연 무엇이 정답일까요?</p>
+                <p>오늘은 복잡한 개발 용어 대신, 실제 코드를 짜는 개발자의 시선에서 <strong>'쇼핑몰 제작 비용'</strong>의 민낯을 보여드리려 합니다. 특히 경기 지역 소상공인 분들께 도움이 될 만한 현실적인 조언을 담았습니다.</p>
+            </div>
+
+            <h2>1. "렌트비" vs "건축비"의 차이</h2>
+            <div class="content-block">
+                <p>쇼핑몰을 만드는 방법은 크게 두 가지입니다. 임대형 솔루션 (카페24, 아임웹 등) 과 자체 구축형 (워드프레스, 프레임워크 개발) 입니다.</p>
+                <p>임대형은 말 그대로 <strong>'월세'</strong>를 내는 것입니다. 초기 비용은 저렴하지만, 거래액이 늘어나면 수수료도 함께 오릅니다. 마치 번화가 상권에서 장사가 잘 될수록 월세가 오르는 것과 같죠.</p>
+                <blockquote>
+                    "개발자로서 솔직히 말씀드리면, 연 매출 10 억 이하라면 임대형 솔루션을 추천합니다. 하지만 그 이상을 꿈꾼다면 '건축비'를 지불하고라도 내 땅 (서버) 을 갖는 게 낫습니다."
+                </blockquote>
+            </div>
+
+            <h2>2. 숨겨진 비용: 유지보수 (Maintenance)</h2>
+            <div class="content-block">
+                <p>많은 분들이 견적서를 보실 때 '초기 구축 비용'만 보십니다. 하지만 쇼핑몰은 만들어놓고 끝나는 게 아니라, <strong>키우는 것</strong>입니다.</p>
+                <p>서버 업데이트, 보안 패치,突발적인 오류 수정, PG 사 연동 변경 등 보이지 않는 노동이 계속 발생합니다. 경기 지역的一些 업체들이 파격적인 저가 견적 (예: 50 만원) 을 내미는 이유는, 바로 이 <strong>'유지보수 비용'을 견적에 포함하지 않았기 때문</strong>일 확률이 높습니다.</p>
+                <p>결국 오픈 후 3 개월 뒤 "서버가 느려요"라고 문의하시면, 그때부터 추가 비용이 청구되는 구조죠. 저는 이를 '함정 견적'이라고 부릅니다.</p>
+            </div>
+
+            <h2>3. 합리적인 비용 산출법</h2>
+            <div class="content-block">
+                <p>그렇다면 적정한 비용은 얼마일까요? 물론 요구 사항에 따라 천차만별이지만, 일반적인 기준은 이렇습니다.</p>
+                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.5rem;"><strong>기초 공사형 (템플릿 커스텀):</strong> 200 만원 ~ 400 만원 선. 디자인은 제한적이지만 기능은 탄탄합니다.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>중급 공사형 (반응형 커스텀):</strong> 500 만원 ~ 800 만원 선. 브랜드 아이덴티티를 반영하고 마케팅 툴 연동이 가능합니다.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>대형 공사형 (풀 커스텀):</strong> 1,000 만원 이상. 복잡한 멤버십 기능, 재고 관리 시스템 (ERP) 연동 등이 포함됩니다.</li>
+                </ul>
+                <p>이 비용에는 보통 1 년치의 무상 유지보수가 포함되어야 합니다. 견적서를 받으실 때 꼭 확인해보세요. "1 년 후 유지보수 비용은 어떻게 되나요?"라고 묻는 것만으로도 전문성을 가진 개발자인지 알 수 있습니다.</p>
+            </div>
+
+            <h3>마치며</h3>
+            <div class="content-block">
+                <p>쇼핑몰 제작은 단순한 지출이 아니라, 미래의 매출을 위한 <strong>투자</strong>입니다. 무조건 싼 게 좋은 게 아니라, 내 사업 모델에 딱 맞는 옷을 입히는 것이 중요합니다.</p>
+                <p>경기 지역에서 쇼핑몰을 준비 중이시라면, 화려한 포트폴리오보다 <strong>'유지보수 체계'</strong>가 확실한 파트너를 찾아보세요. 그게 결국 가장 저렴한 비용으로最长的인 시간을 버틸 수 있는 길입니다.</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Q. 유지보수는 꼭 해야 하나요?</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">네, 필수입니다. 보안 위협은 매일 새로워지며, 브라우저 업데이트에 따라 사이트가 깨질 수도 있습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 견적 기간은 얼마나 걸리나요?</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">일반적으로 기획 1 주, 디자인 2 주, 개발 3~4 주 정도로 총 1.5~2 개월 정도 소요됩니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 경기 지역 방문 가능한가요?</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">네, 수원, 성남, 분당 등 경기 주요 지역은 직접 방문하여 미팅 진행 가능합니다.</p>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <h3 style="color: #fff; margin-bottom: 1rem;">ORGANIC DEV.</h3>
+            <p>투명한 견적과 탄탄한 기술력으로<br>경기 지역 소상공인의 디지털 성장을 돕습니다.</p>
+            
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="mailto:contact@organicdev.kr">contact@organicdev.kr</a>
+            </div>
+            
+            <p style="margin-top: 3rem; font-size: 0.8rem; opacity: 0.6;">
+                &copy; 2024 Organic Development. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

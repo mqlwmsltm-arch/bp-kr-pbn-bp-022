@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기 쇼핑몰 제작 비용, 숨겨진 진실과 현실적인 견적 이야기</title>
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <meta name="description" content="경기 쇼핑몰 제작 비용이 궁금하신가요? 디자인부터 서버 관리까지, 숨겨진 추가 비용 없는 투명한 견적과 가장 중요한 '유지보수'에 대한 솔직한 이야기를 들려드립니다.">
+    <meta name="keywords" content="경기 쇼핑몰 제작 비용, 쇼핑몰 개발 견적, 반응형 쇼핑몰, 이커머스 솔루션, 웹개발자">
+    <link rel="canonical" href="https://kr-pbn-bp-022.pages.dev">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kr-pbn-bp-022.pages.dev">
+    <meta property="og:title" content="경기 쇼핑몰 제작 비용, 솔직하게 털어놓습니다">
+    <meta property="og:description" content="디자인부터 서버 관리까지, 경기지역 쇼핑몰 제작 시 꼭 알아야 할 비용의 모든 것.">
+    <meta property="og:site_name" content="BPAAS Organic">
+    <meta property="og:locale" content="ko_KR">
+
+    <style>
+        :root {
+            --color-bg: #fdfcf8;
+            --color-text-main: #2c3e50;
+            --color-text-sub: #5e6d7e;
+            --color-primary: #2b7a78;
+            --color-secondary: #3aafa9;
+            --color-accent: #def2f1;
+            --color-stripe: #eef5f4;
+            --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            --spacing-unit: 1rem;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            background-image: repeating-linear-gradient(
+                45deg,
+                var(--color-bg) 0,
+                var(--color-bg) 20px,
+                var(--color-stripe) 20px,
+                var(--color-stripe) 40px
+            );
+            font-size: 16px;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-primary);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-secondary);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--color-text-main);
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.2rem; letter-spacing: -0.03em; }
+        h2 { font-size: 1.8rem; letter-spacing: -0.02em; }
+        h3 { font-size: 1.4rem; }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--color-text-sub);
+        }
+
+        .highlight {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(253, 252, 248, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            letter-spacing: -0.05em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--color-text-main);
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0 4rem;
+            text-align: center;
+            background-color: var(--color-accent);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 4rem 0;
+            background-color: var(--color-bg);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--color-primary);
+        }
+
+        .info-block {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            display: block;
+            margin: 1rem 0;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-main);
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--color-text-sub);
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta-section {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--color-primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f1f4f5;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
+            color: var(--color-text-sub);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 1rem;
+                box-shadow: var(--shadow-md);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .info-block {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">BPAAS.ORGANIC</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="메뉴 열기">☰</button>
+                <ul>
+                    <li><a href="#intro">소개</a></li>
+                    <li><a href="#cost">비용 분석</a></li>
+                    <li><a href="#process">제작 과정</a></li>
+                    <li><a href="#faq">자주 묻는 질문</a></li>
+                    <li><a href="tel:010-0000-0000">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>경기 쇼핑몰 제작 비용,<br>솔직하게 털어놓습니다.</h1>
+            <p>"Replacing 'Cheap' with 'Valuable'."<br>
+            단순히 싸게 만드는 게 아닌, 오랫동안 팔리는 쇼핑몰을 위한 현실적인 견적 가이드입니다.</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Intro Section -->
+        <section id="intro" class="section">
+            <div class="container">
+                <div class="info-block">
+                    <h2>안녕하세요, 경기에서 쇼핑몰을 꿈꾸는 사장님.</h2>
+                    <p>
+                        처음 쇼핑몰을 시작하실 때 가장 큰 장벽, 바로 <strong>'비용'</strong>이죠.<br>
+                        인터넷을 뒤져보면 30 만 원부터 3,000 만 원까지 천차만별인 견적 때문에 머리가 지끈거립니다.<br>
+                        "과연 이 가격에 믿을 수 있을까?","나중에 추가 비용은 없을까?"라는 고민, 저 역시 잘 알고 있습니다.<br>
+                        <br>
+                        오늘 이 페이지에서는 경기도내 클라이언트 분들과 소통하며 쌓은 경험을 바탕으로,<br>
+                        <strong>숨겨진 비용 없이 투명하게 책정되는 쇼핑몰 제작 비용의 실체</strong>를 이야기하려 합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Breakdown Cards -->
+        <section id="cost" class="section">
+            <div class="container">
+                <h2 style="text-align: center;">비용의 구성 요소를 하나씩 뜯어봅시다.</h2>
+                <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+                    쇼핑몰은 단순한 '제품'이 아니라 살아있는 '시스템'입니다. 무엇이 비용을 결정하는지 확인해보세요.
+                </p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>1. 기획 및 디자인</h3>
+                        <p>
+                            단순히 이쁘게 만드는 게 아닙니다. <strong>사용자 경험 (UX)</strong>이 곧 전환율입니다.<br>
+                            반응형 웹 (모바일 최적화) 은 기본이며, 경기 지역 특성에 맞는 타겟팅 디자인이 포함됩니다.<br>
+                            <span class="highlight">기획의 깊이가 견적을 결정합니다.</span>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>2. 개발 기능의 확장성</h3>
+                        <p>
+                            단순 상품 진열인가, 실시간 재고 관리와 연동인가?<br>
+                            결제 시스템 (PG 사) 연동, 배송비 자동 계산, 해외 배송 설정 등<br>
+                            <strong>필요한 기능의 스펙</strong>에 따라 개발 시간이 달라집니다.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>3. 서버 및 도메인</h3>
+                        <p>
+                            쇼핑몰의 집 (서버) 과 주소 (도메인) 입니다.<br>
+                            트래픽이 몰려도 죽지 않는 튼튼한 서버 환경 구축 비용입니다.<br>
+                            초기 구축비와 <strong>연간 유지보수 비용</strong>을 명확히 구분해야 합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reality Check Section -->
+        <section class="section">
+            <div class="container">
+                <div class="info-block">
+                    <h2>🚨 주의: 초저가 견적의 함정</h2>
+                    <p>
+                        가끔 "몇십 만 원이면 쇼핑몰 뚝딱"이라는 광고를 보시죠?<br>
+                        문제의 핵심은 <strong>'유지보수'</strong>입니다.<br>
+                        오픈 후 상품이 하나도 안 올라가거나, 결제가 안 되거나, 모바일에서 깨질 때<br>
+                        연락 두절되면 그때부터는 진짜 비용이 발생하기 시작합니다. (수정 비용, 재제작 비용 등)<br>
+                        <br>
+                        저는 <strong>"만들고 끝나는 관계"가 아닌 "함께 성장하는 파트너"</strong>가 되려 합니다.<br>
+                        그래서 초기 견적에 솔직한 유지보수 비용까지 투명하게 제시해 드립니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 style="margin-bottom: 2rem;">자주 묻는 질문 (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q. 경기 지역 방문 미팅이 가능한가요?</div>
+                    <div class="faq-answer">
+                        A. 네, 물론입니다. 수원, 성남, 의정부 등 경기 전역 어디서든 방문 미팅이 가능합니다. <br>
+                        직접 얼굴을 보고 기획하는 것이 가장 정확한 견적을 산출하는 길입니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 유지보수 비용은 얼마나 드나요?</div>
+                    <div class="faq-answer">
+                        A. 쇼핑몰 규모에 따라 다르지만, 일반적인 소규모 쇼핑몰의 경우 <br>
+                        서버비와 도메인 비용 포함 월 3~5 만 원 선에서 시작합니다. <br>
+                        디자인 수정 등 추가 작업은 건별 별도 협의하거나 유지보수 패키지를 선택하실 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 제작 기간은 보통 얼마나 걸리나요?</div>
+                    <div class="faq-answer">
+                        A. 기획부터 오픈까지 평균 4 주 ~ 6 주 정도 소요됩니다. <br>
+                        급하게 오픈해야 하는 경우 '런칭 패키지'를 통해 기간을 단축할 수도 있습니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="container">
+            <div class="cta-section">
+                <
+</body>
+</html>

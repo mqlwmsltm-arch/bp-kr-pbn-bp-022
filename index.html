@@ -1,214 +1,522 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인프라 테크 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기 쇼핑몰 제작 비용 | 투명한 견적과 정직한 개발자 이야기 (Real-PBN)</title>
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <meta name="description" content="경기 쇼핑몰 제작 비용이 궁금하신가요? 숨겨진 추가 비용 없는 투명한 견적과 가장 중요한 '유지보수'에 대한 솔직한 이야기를 들려드립니다.">
+    <meta name="keywords" content="경기 쇼핑몰 제작 비용, 쇼핑몰 개발 견적, 반응형 쇼핑몰, 이커머스 솔루션, 웹개발자">
+    <link rel="canonical" href="https://kr-pbn-bp-022.pages.dev">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="경기 쇼핑몰 제작 비용, 솔직하게 털어놓습니다">
+    <meta property="og:description" content="디자인부터 서버 관리까지. 쇼핑몰을 만드는 데 진짜로 드는 비용과 시간을 정리했습니다.">
+    <meta property="og:url" content="https://kr-pbn-bp-022.pages.dev">
+    <meta property="og:site_name" content="경기 쇼핑몰 스토어">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="쇼핑몰 제작, 비용보다 중요한 건 '지속 가능성'입니다">
+    <meta name="twitter:description" content="내 쇼핑몰을 어떻게 키울지 고민 중이신가요? 경기 지역 기반의 개발 경험을 바탕으로 조언해 드립니다.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Real-PBN Ecommerce",
+      "image": "https://kr-pbn-bp-022.pages.dev/og-image.jpg",
+      "telephone": "010-6279-0862",
+      "url": "https://kr-pbn-bp-022.pages.dev",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "경기",
+        "addressCountry": "KR"
+      },
+      "priceRange": "$$",
+      "description": "경기 지역 기반의 맞춤형 쇼핑몰 제작 및 컨설팅 서비스를 제공합니다.",
+      "areaServed": "경기"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        :root {
+            --primary: #2e2522;
+            --secondary: #fcf8f2;
+            --accent: #7f5539;
+            --bg-white: #ffffff;
+            --border-color: #e5e5e5;
+            --text-color: #2e2522;
+            --gap: 48px;
+            --padding: 72px;
+            --section-gap: 120px;
+            --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-white);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.25rem; }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1.5rem;
+            max-width: 70ch;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(252, 248, 242, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.03em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--section-gap) 0;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: var(--gap);
+            align-items: center;
+        }
+
+        .hero-content {
+            padding-right: 24px;
+        }
+
+        .hero-visual {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--secondary) 25%, #f0ebe5 25%, #f0ebe5 50%, var(--secondary) 50%, var(--secondary) 75%, #f0ebe5 75%, #f0ebe5 100%);
+            background-size: 40px 40px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-visual::after {
+            content: "🛒";
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 14px 28px;
+            font-weight: 600;
+            margin-top: 24px;
+            border: 1px solid var(--primary);
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: var(--section-gap) 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .text-block {
+            border-left: 2px solid var(--accent);
+            padding-left: 32px;
+        }
+
+        /* UGC Reviews */
+        .reviews-section {
+            background-color: var(--secondary);
+            padding: var(--section-gap) 0;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .review-card {
+            background: var(--bg-white);
+            padding: 32px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .review-meta {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Cost Breakdown Table (Minimal) */
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 32px;
+        }
+
+        .cost-table th, .cost-table td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cost-table th {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: var(--section-gap) 0 48px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --padding: 24px;
+            }
+
+            h1 { font-size: 2.25rem; }
+            h2 { font-size: 1.75rem; }
+
+            .nav-wrapper nav {
+                display: none; /* Simple mobile hide for this demo */
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 0;
+            }
+
+            .hero-visual {
+                height: 250px;
+                order: -1;
+                margin-bottom: 32px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인프라 테크 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인프라 테크</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h3>
-          <p>새로 웜업을 진행하는 도메인의 수신율과 보안 도달 평판을 극대화하기 위해, SPF와 DKIM 인증 결과 기반의 DMARC 규약을 초기 단순 모니터링 수준에서 메일 수신 서버들이 미...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h3>
-          <p>한정된 자원으로 초경량 고성능 웹 서버를 운영할 때, 실시간 커널 로그가 무제한 적재되어 디스크 공간 부족으로 전체 프로세스가 락되는 파멸적 재앙을 미연에 방지하기 위해 `/etc...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h3>
-          <p>원거리 대용량 데이터 전송 성능을 극대화하는 TCP 윈도우 스케일 팩터 옵션을 커널 수준에서 적용했을 때, 도중에 위치한 오래된 하드웨어 방화벽들이 이를 비정상 버스트 트래픽으로 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 마포 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 마포 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">Real-PBN Store.</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#process">프로세스</a></li>
+                    <li><a href="#cost">제작비용</a></li>
+                    <li><a href="#reviews">고객 후기</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>쇼핑몰 제작,<br>생각보다 복잡하지 않아요.</h1>
+                <p>어렵게만 느껴지는 '경기 쇼핑몰 제작 비용'과 개발 용어들. <br>제 10 년 차 개발자로서 가장 담백하고, 실속 있는 조언을 드립니다.</p>
+                <a href="tel:01062790862" class="btn">무료 견적 상담하기</a>
+            </div>
+            <div class="hero-visual">
+                <!-- CSS Visual Representation of Design -->
+                <div style="width:80%; height:80%; border: 1px solid #ccc; padding: 20px; position: relative; background: #fff;">
+                    <div style="height: 10px; width: 40%; background: #f0f0f0; margin-bottom: 10px;"></div>
+                    <div style="height: 10px; width: 60%; background: #f0f0f0; margin-bottom: 20px;"></div>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="width: 30%; height: 80px; background: #f9f9f9; border: 1px dashed #ddd;"></div>
+                        <div style="width: 30%; height: 80px; background: #f9f9f9; border: 1px dashed #ddd;"></div>
+                        <div style="width: 30%; height: 80px; background: #f9f9f9; border: 1px dashed #ddd;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction / Conversational Content -->
+        <section id="about" class="content-section container">
+            <div class="grid-2">
+                <div>
+                    <h2>왜 '제작 비용'만 보시나요?</h2>
+                    <p>안녕하세요. 실무를 오래 해오다 보니 느낀 게 많네요. 많은 분들이 "경기 쇼핑몰 제작 비용"을 검색하며 가장 싼 곳을 찾습니다. 그런데 막상 오픈하면 숨겨진 비용 (서버료, 도메인, 기능 추가, AS) 이 돈을 먹습니다.</p>
+                    <p>저희는 처음부터 이걸 공개합니다. "이 기능은 나중에 돈 더 들 수 있습니다"라고 말씀드리는 게 저의 직업정신이니까요.</p>
+                </div>
+                <div class="text-block">
+                    <h3>제 철학은 간단합니다.</h3>
+                    <p>화려한 기능보다 '팔리는 구조'가 중요합니다. <br>
+                    1. 로딩이 빨라야 합니다.<br>
+                    2. 모바일에서 매끄러워야 합니다.<br>
+                    3. 관리하기 쉬워야 합니다.</p>
+                    <p>이 세 가지만 지켜도, 예산은 아끼고 매출은 올릴 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="content-section" style="background-color: #faf9f7;">
+            <div class="container">
+                <h2>어떻게 진행되나요?</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 40px;">
+                    <div style="padding: 24px; border-top: 2px solid var(--primary);">
+                        <h3>01. 기획</h3>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">고객님 브랜드의 타겟을 분석하고, 필요한 기능을 1:1 로 쪼개봅니다.</p>
+                    </div>
+                    <div style="padding: 24px; border-top: 2px solid var(--accent);">
+                        <h3>02. 디자인 & 개발</h3>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">반응형 웹 표준을 준수하며, 구매 전환율이 높은 UI 를 만듭니다.</p>
+                    </div>
+                    <div style="padding: 24px; border-top: 2px solid var(--primary);">
+                        <h3>03. 오픈 & 유지보수</h3>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">단순 납품으로 끝내지 않습니다. 오픈 후 3 개월의 골든타임을 함께합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Table Section -->
+        <section id="cost" class="content-section container">
+            <h2>투명한 견적 기준 (예시)</h2>
+            <p>물론 쇼핑몰 규모마다 다르지만, 대략적인 감을 잡으실 수 있도록 기준을 적어두었습니다.</p>
+            
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>내용</th>
+                        <th>예상 비용 (VAT 별)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>기획 및 디자인</td>
+                        <td>단순 템플릿 vs 커스텀 디자인</td>
+                        <td>100 만원~</td>
+                    </tr>
+                    <tr>
+                        <td>개발 (프론트/백엔드)</td>
+                        <td>기능 구현, 결제 연동, DB 구축</td>
+                        <td>200 만원~</td>
+                    </tr>
+                    <tr>
+                        <td>유지보수 (월)</td>
+                        <td>서버 관리, 보안 업데이트, 소소한 수정</td>
+                        <td>10 만원~</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 24px; font-size: 0.9rem; color: #666;">* 위 비용은 포트폴리오 기준 예시이며, 정확한 견적은 상담 후 산출됩니다.</p>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2>함께한 브랜드들의 이야기</h2>
+                <div class="review-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"경기에서 쇼핑몰 제작 비용 문의를 여러 곳에 해봤는데, 가장 솔직하게 답변을 주셨어요. 불필요한 기능은 빼라고 해서 예산을 아꼈습니다."</p>
+                        <div class="review-meta">
+                            <span>패션 편집샵 A 대표</span>
+                            <span>2023.10.12</span>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"디자인이 너무 깔끔해서 고객 반응이 좋아요. 특히 모바일 화면 최적화가 잘 되어있다고 하네요. 개발자님 소통도 빠르십니다."</p>
+                        <div class="review-meta">
+                            <span>수제 디저트 B 사장님</span>
+                            <span>2023.11.05</span>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <p>"오픈 후 트래픽 몰릴 때 서버가 튕길 뻔했는데 밤늦게까지 고쳐주셔서 감사했습니다. 유지보수 측면에서 믿고 맡깁니다."</p>
+                        <div class="review-meta">
+                            <span>뷰티 쇼핑몰 C 팀장</span>
+                            <span>2024.01.20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Real-PBN Store</h4>
+                <p>경기도 수원시 영통구 광교로 123<br>
+                대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:01062790862">010-6279-0862</a></li>
+                    <li><a href="mailto:contact@real-pbn.com">contact@real-pbn.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="border-top: 1px solid #eee; padding-top: 24px; text-align: center;">
+            &copy; 2024 Real-PBN Store. All rights reserved.
+        </div>
     </footer>
-  </div>
+
 </body>
 </html>
