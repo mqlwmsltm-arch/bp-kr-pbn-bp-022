@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "importedAt": "2026-07-03T07:40:17.678Z",
+  "campaignId": null,
+  "slug": "kr-pbn-bp-022",
+  "adoptExisting": true,
+  "sourceType": "urlSnapshot",
+  "sourceUrl": "https://gyeonggi-web-builder.pbn-builder.xyz/",
+  "copiedFiles": 1,
+  "copiedBytes": 19132,
+  "fetchedAssets": 0,
+  "skippedAssets": 0,
+  "skippedSymlinks": 0
+}
